@@ -1,15 +1,17 @@
 #tableHeaderRow {
   display: flex;
   justify-content: center;
-  background-color: blue;
-  color: white;
+  background-color: #F4EDD3;
   width: 100vw;
 }
 
 .tableHeading {
   display: flex;
   justify-content: center;
-  background-color: black;
-  width: 20vw;
-  font-size: 1.3vw;
+  background-color: #D0111E;
+  width: 100vw;
+  border-right: 0.1vw solid;
+  padding: 1.2vw;
+  font-size: 1.7vw;
+  color: #DDE6ED;
 }

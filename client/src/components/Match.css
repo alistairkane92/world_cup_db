@@ -1,18 +1,24 @@
 .match {
   display: flex;
-  border-style: solid;
   justify-content: center;
-  border-width: 1px;
-  background-color: yellow;
+  background-color: #1893D2;
+  color: #F4EDD3;
   width: 100vw;
 }
 
+.match:hover {
+  background-color: #C9B274;
+  opacity: 0.95;
+  filter: alpha(opacity=50);
+}
+
 .column {
+  display: flex;
+  justify-content: center;
   width: 20vw;
-  font-size: 1vw;
-  list-style-type: none;
-  height: 1vw;
+  font-size: 0.8vw;
   text-align: center;
-  padding: 2vw;
-  margin: 1px;
+  padding: 0.5vw;
+  border-top: 0.1vw solid;
+  border-right: 0.1vw solid
 }
