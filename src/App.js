@@ -9,8 +9,10 @@ class App extends Component {
     this.state = {
       wCup: null,
       countries: null,
-      countriesModels: null
+      // countriesModels: null
     }
+
+    this.assignFlag = this.assignFlag.bind(this);
   }
 
   componentDidMount(){
@@ -20,26 +22,39 @@ class App extends Component {
       wCup: wCupData
     }))
 
-    fetch('https://restcountries.eu/rest/v2/alpha/{element.home_team.code}')
+    fetch('https://restcountries.eu/rest/v2/all')
     .then(res => res.json())
     .then(countriesData => this.setState({
-      this.state.countries.push(countriesData)
+      countries: countriesData
     }))
-
-    // if (this.state.wCup && this.state.countries){
-    //   this.state.wCup.forEach(function(match){
-    //
-    //   })
-    // }
   }
 
   render() {
-    console.log(this.state.countries);
+    if (this.state.wCup && this.state.countries){
+      this.assignFlag();
+    }
+
     return (
       <div className="App" >
         <Matches allMatches={this.state.wCup} countries={this.state.countries}/>
       </div>
     );
+  }
+
+  assignFlag(){
+    this.state.wCup.forEach(function(match){
+      this.state.countries.forEach(function(country){
+        if (match.home_team.country === country.name){
+          match.home_team["flag"] = country.flag
+        }
+
+        if (match.away_team.country === country.name){
+          match.away_team["flag"] = country.flag
+        }
+      })
+    }.bind(this))
+
+    console.log("finito", this.state.wCup);
   }
 }
 
