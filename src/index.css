@@ -4,10 +4,14 @@ body {
   font-family: sans-serif;
 }
 
-h1 {
-  color: cadetblue;
+.App {
+  background-color: goldenrod;
 }
 
-.App {
-  background-color: yellow;
+li {
+  height: 6vw;
+  color: black;
+  width: 45vw;
+  border-style: solid;
+  border-width: 2px;
 }

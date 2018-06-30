@@ -1,0 +1,13 @@
+.match {
+  display: flex;
+  border-style: solid;
+  border-width: 3px;
+  background-color: yellow;
+  width: 40vw;
+}
+
+ul {
+  list-style-type: none;
+  color: cadetblue;
+  font: arial;
+}
