@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Match from '../components/Match';
 import MatchHeading from './MatchHeading'
+import "./styles/Match.css";
 
 class Matches extends Component{
   constructor(props){
@@ -29,9 +30,11 @@ class Matches extends Component{
     }
 
     return (
+      <div id="background">
       <div id="table">
         <MatchHeading/>
         {matches}
+      </div>
       </div>
     )
   }

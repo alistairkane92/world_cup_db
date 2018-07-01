@@ -1,9 +1,8 @@
 .match {
-  display: flex;
-  justify-content: center;
+  display:flex;
   background-color: #1893D2;
   color: #F4EDD3;
-  width: 100vw;
+  border-radius: 1.2vw;
 }
 
 .match:hover {
@@ -15,10 +14,20 @@
 .column {
   display: flex;
   justify-content: center;
+  height: 5vw;
   width: 20vw;
-  font-size: 0.8vw;
-  text-align: center;
-  padding: 0.5vw;
+  font-size: 1vw;
+  align-items: center;
   border-top: 0.1vw solid;
-  border-right: 0.1vw solid
+}
+
+#table{
+  width: 85vw;
+  border-radius: 25px;
+}
+
+#background{
+  display: flex;
+  justify-content: center;
+  background-color: #00008B;
 }
