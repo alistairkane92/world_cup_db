@@ -2,7 +2,9 @@
   "name": "world_cup",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://worldcup.sfg.io/",
   "dependencies": {
+    "lodash": "^4.17.10",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-router-dom": "^4.3.1",
