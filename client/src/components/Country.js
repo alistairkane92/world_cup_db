@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Match from './Match';
 
 class Country extends Component {
   constructor(props){
@@ -9,7 +10,6 @@ class Country extends Component {
   }
 
   componentDidMount(){
-    //make request to APIs here
     const countryCode = this.props.match.params.name;
     const url = `/matches/country?fifa_code=${countryCode}`
 
@@ -22,10 +22,16 @@ class Country extends Component {
 
   render(){
     if (this.state.matches === null) return null;
+    const matches = [];
 
-    console.log(this.state.matches);
+    this.state.matches.forEach(element => {
+      matches.push(<Match matchInfo={element} key={element.fifa_id}/>)
+    })
+
     return(
-      <h1>{this.state.matches[0].home_team_country}</h1>
+      <div>
+        {matches}
+      </div>
     )
   }
 }

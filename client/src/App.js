@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Matches from "./containers/Matches";
-import Home from "./containers/Home";
+import Matches from "./components/Matches";
+import Home from "./components/Home";
 import CountrySelect from "./components/CountrySelect";
 import Country from "./components/Country";
 
