@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Match from './Match';
+import MatchHeading from './MatchHeading';
 
 class Country extends Component {
   constructor(props){
@@ -30,6 +31,7 @@ class Country extends Component {
 
     return(
       <div>
+        <MatchHeading/>
         {matches}
       </div>
     )

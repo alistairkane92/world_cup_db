@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Match from '../components/Match';
-import "./Matches.css";
+import MatchHeading from './MatchHeading'
 
 class Matches extends Component{
   constructor(props){
@@ -30,13 +30,7 @@ class Matches extends Component{
 
     return (
       <div id="table">
-          <div id="tableHeaderRow">
-            <div className="tableHeading">Round</div>
-            <div className="tableHeading">Teams</div>
-            <div className="tableHeading">Location</div>
-            <div className="tableHeading">Attendance</div>
-            <div className="tableHeading">Winner</div>
-          </div>
+        <MatchHeading/>
         {matches}
       </div>
     )
