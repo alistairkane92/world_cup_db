@@ -11,7 +11,7 @@ class Matches extends Component{
   }
 
   componentDidMount(){
-    fetch('http://worldcup.sfg.io/matches')
+    fetch('http://worldcup.sfg.io/matches?details=false')
     .then(res => res.json())
     .then(wCupData => this.setState({
       wCup: wCupData

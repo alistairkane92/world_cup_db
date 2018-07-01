@@ -1,5 +1,5 @@
 import React from 'react';
-import "./MatchHeading.css";
+import "./styles/MatchHeading.css";
 
 const MatchHeading = () => (
   <div id="tableHeaderRow">
