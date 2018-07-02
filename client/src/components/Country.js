@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Match from './Match';
-import MatchHeading from './MatchHeading';
+import MatchTable from './MatchTable';
 
 class Country extends Component {
   constructor(props){
@@ -23,17 +23,9 @@ class Country extends Component {
 
   render(){
     if (this.state.matches === null) return null;
-    const matches = [];
-
-    this.state.matches.forEach(element => {
-      matches.push(<Match matchInfo={element} key={element.fifa_id}/>)
-    })
 
     return(
-      <div>
-        <MatchHeading/>
-        {matches}
-      </div>
+      <MatchTable matches={this.state.matches}/>
     )
   }
 }

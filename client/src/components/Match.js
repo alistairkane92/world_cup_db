@@ -2,10 +2,9 @@ import React from 'react';
 import "./styles/Match.css"
 
 const Match = ({matchInfo}) => {
-  const {venue, location, datetime, attendance, stage_name, home_team_country, away_team_country, winner} = matchInfo;
+  const {location, datetime, attendance, stage_name, home_team_country, away_team_country, winner} = matchInfo;
 
   const formattedTime = new Date(datetime).toLocaleString('en-GB');
-  console.log(formattedTime);
 
   return(
   <div className="match">
