@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Match from './Match';
 import MatchTable from './MatchTable';
 
 class Country extends Component {

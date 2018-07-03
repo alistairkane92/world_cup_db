@@ -1,0 +1,76 @@
+#matchView {
+  background-color: yellow;
+  display: flex;
+  justify-content: space-around;
+  border:1px solid;
+  margin: 0px 1px 10px 1px;
+}
+
+#matchDetails {
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+}
+
+#score{
+  display:flex;
+  justify-content: space-around;
+  background-color:white;
+  height: 7.7vw;
+  font-size: 1.5vw;
+}
+
+.numberScore{
+  display: flex;
+  justify-content: center;
+  width: 9vw;
+  border: 1px solid;
+}
+
+.matchTeamPane{
+  align-items: center;
+  margin: 0.5vw;
+}
+
+.event {
+  margin: 10px 10px 10px 10px;
+}
+
+.event li{
+  list-style-type : none;
+}
+
+.teamNameHeader {
+  display:flex;
+  justify-content: center;
+  background-color: #1893D2;
+  color: white;
+  width: 30vw;
+  border: 0.1vw solid;
+  border-color: black;
+}
+
+.teamNameHeader h1{
+  font-size: 1.5vw;
+}
+
+.goalList{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border: 1px solid;
+}
+
+.goalList p{
+  font-size: 1.2vw;
+}
+
+.cards{
+  border: 1px solid;
+}
+
+.subs{
+  border:1px solid;
+}

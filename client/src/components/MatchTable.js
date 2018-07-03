@@ -16,7 +16,7 @@ class MatchTable extends Component {
     newMatches.push(<MatchHeading key="matchHeader"/>)
 
     this.props.matches.forEach(function(element){
-      let url = `/match/${element.fifa_id}`
+      let url = `/matches/${element.fifa_id}`
       let newMatch = <Link to={url} style={{ textDecoration: 'none' }} key={element.fifa_id}><Match matchInfo={element} /></Link>
       newMatches.push(newMatch);
     })
