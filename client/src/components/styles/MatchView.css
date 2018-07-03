@@ -28,8 +28,8 @@
 }
 
 .matchTeamPane{
+  background-color:white;
   align-items: center;
-  margin: 0.5vw;
 }
 
 .event {

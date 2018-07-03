@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/MatchView.css'
+import Goalscorers from './Goalscorers'
 import filter from 'lodash/filter';
-
 
 const MatchTeamPane = ({team, events, stats}) => {
   const goalArr = filter(events, {"type_of_event": "goal"})
@@ -13,19 +13,8 @@ const MatchTeamPane = ({team, events, stats}) => {
     return o.type_of_event === "yellow-card" || o.type_of_event === "red-card"
   })
 
-  const goalList = goalArr.map(event => (
-    <p key={event.id}>{event.player}({event.time})</p>
-  ))
-
-  // for(let i = 0; i < subsArr.length; i+1){
-  //   const inPlayer = subsArr[i].player;
-  //   console.log("Inplayer:", inPlayer);
-  //   const outPlayer = subsArr[i + 1];
-  //   subsList.push(<p key={inPlayer.id}>{inPlayer}</p>)
-  // }
-
   const subsList = subsArr.map(event => (
-    <p key={event.id}>{event.player}</p>
+    <p key={event.id}>{event.player} was a sub in {event.time}</p>
   ))
 
 console.log(cardsArr);
@@ -38,9 +27,7 @@ console.log(cardsArr);
       <div className="teamNameHeader">
         <h1>{team.country}</h1>
       </div>
-      <div className="goalList">
-        {goalList}
-      </div>
+      <Goalscorers goalEvents = {goalArr}/>
       <div className="subs">
         {subsList}
       </div>
