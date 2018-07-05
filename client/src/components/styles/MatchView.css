@@ -51,7 +51,7 @@
 }
 
 .teamNameHeader h1{
-  font-size: 1.5vw;
+  font-size: 2vw;
 }
 
 .goalList{
@@ -61,16 +61,55 @@
   align-items: center;
   background-color: white;
   border: 1px solid;
+  height: 10vw;
 }
 
 .goalList p{
-  font-size: 1.2vw;
+  font-size: 0.8vw;
+  height: 0.3vw;
+}
+
+.player {
+  margin-left: 1.9vw;
+  font-size: 1vw;
+}
+
+.lineUpHeader{
+  display: flex;
+  justify-content: center;
+  font-size: 0.5vw;
+  text-decoration: underline;
+}
+
+.subText{
+  display: flex;
+  margin-left: 1.8vw;
+  font-size: 0.85vw;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.playerText{
+  text-transform: uppercase;
+}
+
+.lineUp {
+  border-left: 1px solid;
 }
 
 .cards{
+  display: flex;
+  justify-content: center;
   border: 1px solid;
+  font-size: 0.8vw;
 }
 
 .subs{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 10vw;
   border:1px solid;
+  font-size: 0.5vw;
 }
