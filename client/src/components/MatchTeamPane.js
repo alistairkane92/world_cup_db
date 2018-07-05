@@ -9,7 +9,13 @@ import Cards from './Cards';
 import filter from 'lodash/filter';
 
 const MatchTeamPane = ({team, events, stats}) => {
-  const goalsArr = filter(events, {"type_of_event": "goal"})
+  console.log(team.country, events);
+  const goalsArr = filter(events, function(event){
+    return event.type_of_event === "goal" || event.type_of_event === "goal-penalty"
+    || event.type_of_event === "goal-own"
+  })
+
+  console.log(team.country, "GoalsArr", goalsArr);
 
   const subsArr = filter(events, function(event){
     return event.type_of_event === "substitution-in" || event.type_of_event === "substitution-out"
@@ -18,12 +24,6 @@ const MatchTeamPane = ({team, events, stats}) => {
   const cardsArr = filter(events, function(event){
     return event.type_of_event === "yellow-card" || event.type_of_event === "red-card"
   })
-
-  //standardise player names
-  // const s11 = stats.starting_eleven;
-  // s11.forEach(playerObj => {
-  //   playerObj.name = playerObj.name.toLowerCase();
-  // })
 
   return(
     <div className="matchTeamPane">
