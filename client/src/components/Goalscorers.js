@@ -5,9 +5,9 @@ const GoalScorers = (props) => {
 
   const goalList = props.goalEvents.map(event => {
     if (event.type_of_event === "goal-penalty"){
-      return (<p key={event.id}>{event.player}({event.time} penalty)  </p>)
+      return (<p key={event.id}>{event.player}({event.time} pen)  </p>)
     } else if (event.type_of_event === "goal-own"){
-      return (<p key={event.id}>{event.player}({event.time} OG) </p>)
+      return (<p key={event.id}>{event.player}({event.time} OG.) </p>)
     }
     return(<p key={event.id}>{event.player}({event.time})</p>)
   })
