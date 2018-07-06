@@ -3,8 +3,6 @@ import './styles/MatchView.css';
 
 import Goalscorers from './Goalscorers';
 import Lineup from './Lineup';
-import Subs from './Subs';
-import Cards from './Cards';
 
 import filter from 'lodash/filter';
 
@@ -28,8 +26,7 @@ const MatchTeamPane = ({team, events, stats}) => {
         <h1>{team.country}</h1>
       </div>
       <Goalscorers goalEvents={goalsArr}/>
-      <Lineup startingEleven={stats.starting_eleven} subEvents={subsArr}/>
-      <Cards cardEvents={cardsArr}/>
+      <Lineup startingEleven={stats.starting_eleven} subEvents={subsArr} cardEvents={cardsArr}/>
     </div>
   )
 }

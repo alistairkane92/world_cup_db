@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ScoreBoard = (props) => (
-  <div id="matchDetails">
+  <div id="scoreBoard">
     <div id="score">
       <div className="numberScore">
         <h1>{props.homeScore}</h1>

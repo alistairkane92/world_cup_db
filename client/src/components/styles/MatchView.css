@@ -2,32 +2,62 @@
   background-color: yellow;
   display: flex;
   justify-content: space-around;
+  height: 50vw;
 }
 
-#matchDetails {
-  background-color: black;
+#scoreBoard{
+  background-color: yellow;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+}
+
+#matchDetails{
+  border: 1px solid;
+}
+
+#matchInfoPane{
+  font-size: 1.5vw;
+  list-style-type: none;
+}
+
+#matchInfoPaneHeader{
+  display: flex;
+  flex-direction: column;
+  height: 12vw;
+  font-size: 1vw;
+  background-color: #1893D2;
+  justify-content: center;
+  padding: 1vw;
+  align-items: center;
+}
+
+#matchInfoPaneFooter{
+  font-size: 1vw;
 }
 
 #score{
   display:flex;
-  justify-content: space-around;
-  background-color:white;
-  height: 7.7vw;
+  justify-content: space-between;
+  background-color: white;
   font-size: 1.5vw;
+}
+
+.footerLi{
+  list-style-type: none;
+  text-transform: uppercase;
 }
 
 .numberScore{
   display: flex;
   justify-content: center;
-  width: 9vw;
+  width: 12.5vw;
   border: 1px solid;
 }
 
 .matchTeamPane{
   background-color:white;
   align-items: center;
+  width: 45vw
 }
 
 .event {
@@ -43,7 +73,6 @@
   justify-content: center;
   background-color: #1893D2;
   color: white;
-  width: 30vw;
   border: 0.1vw solid;
   border-color: black;
 }
@@ -65,6 +94,7 @@
 .goalList p{
   font-size: 0.8vw;
   height: 0.3vw;
+  text-transform: uppercase;
 }
 
 .player {
@@ -72,22 +102,52 @@
   font-size: 1vw;
 }
 
-.lineUpHeader{
+.playerEntry{
+  display: flex;
+  height: 2.5vw;
+  align-items: center;
+}
+
+.categoryHeader{
   display: flex;
   justify-content: center;
-  font-size: 0.5vw;
+  font-size: 1vw;
   text-decoration: underline;
 }
 
 .subText{
-  display: flex;
   margin-left: 1.8vw;
   font-size: 0.85vw;
   font-style: italic;
   text-transform: uppercase;
 }
 
+.card{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 1.1vw;
+  width: 4vw;
+
+}
+
+.yellow-card{
+  background-color: yellow;
+  border: 0.1vw solid;
+  height: 0.6vw;
+  padding: 0.3vw;
+  width: 0.3vw;
+}
+
+.red-card{
+  background-color: red;
+  border: 1px solid;
+  width: 0.7vw;
+  height: 1vw;
+}
+
 .playerText{
+  display: flex;
   text-transform: uppercase;
 }
 
@@ -100,6 +160,7 @@
   justify-content: center;
   border: 1px solid;
   font-size: 0.8vw;
+  align-items: center;
 }
 
 .subs{

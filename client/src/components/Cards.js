@@ -5,8 +5,11 @@ const Cards = (props) => {
     <p key={event.id}>{event.player} got a card</p>
   ))
 
+  if (cardsList.length === 0) return null;
+  
   return(
     <div className="cards">
+      <p className="categoryHeader">Cards</p>
       {cardsList}
     </div>
   )

@@ -43,7 +43,7 @@ class MatchView extends Component {
     return(
       <div id="matchView">
         <MatchTeamPane team={home_team} events={homeEvents} stats={home_team_statistics}/>
-        <MatchDetails homeScore={homeScore} awayScore={awayScore} attendance={attendance} date={formattedTime} location={location} officials={officials} stage={stage_name} venue={venue} weather={weather}/>
+        <MatchDetails homeScore={homeScore} awayScore={awayScore} attendance={attendance} kickOff={formattedTime} location={location} officials={officials} stageName={stage_name} venue={venue} weather={weather}/>
         <MatchTeamPane team={away_team} events={awayEvents} stats={away_team_statistics}/>
       </div>
     )

@@ -1,52 +1,54 @@
 import React from 'react';
 import './styles/MatchView.css';
 
-const Player = (props) => {
-  if(props.player.captain && props.sub) {
-    return(
-      <div className="player">
-        <p className="playerText">
-          {props.player.shirt_number} - {props.player.name} (C)
-        </p>
-        <p className="subText">
-          ⇄ {props.sub.player}({props.sub.time})
-        </p>
-      </div>
+const Player = ({player, sub, cards}) => {
+  if (!player) return null;
+
+  let cap = null;
+  let playerSub = null;
+  let playerCards = [];
+
+  const pText = (
+    <p className="playerText">
+      {player.shirt_number} - {player.name}
+    </p>
+  )
+
+  if (player.captain){
+    cap = (
+      <p id="captain">
+        (C)
+      </p>
     )
   }
 
-  if(props.player && props.sub) {
-    return(
-      <div className="player">
-        <p className="playerText">
-          {props.player.shirt_number} - {props.player.name}
-        </p>
-        <p className="subText">
-          ⇄ {props.sub.player}({props.sub.time})
-        </p>
-      </div>
+  if (sub){
+    playerSub = (
+      <p className="subText">
+        ⇄ {sub.player}({sub.time})
+      </p>
     )
   }
 
-  if(props.player.captain) {
-    return(
-      <div className="player">
-        <p className="playerText">
-          {props.player.shirt_number} - {props.player.name} (C)
-        </p>
-      </div>
-    )
+  if (cards.length > 0){
+    cards.forEach(card => {
+      const cardP = (
+        <div className="card">
+          <div className={card.type_of_event}> </div>
+          <p>({card.time})</p>
+        </div>
+      )
+
+      playerCards.push(cardP)
+    })
   }
 
-  if(props.player) {
-    return(
-      <div className="player">
-        <p className="playerText">
-          {props.player.shirt_number} - {props.player.name}
-        </p>
-      </div>
-    )
-  }
+  return(
+    <div className="player">
+      <div className="playerEntry">{pText}{cap}{playerCards}</div>
+      <div className="subDiv">{playerSub}</div>
+    </div>
+  )
 }
 
 export default Player;

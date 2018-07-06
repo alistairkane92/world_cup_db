@@ -7,10 +7,12 @@ const Lineup = (props) => {
 
     const lineUp = props.startingEleven.map(player => {
       let sub = null;
+      let cards = [];
 
       props.subEvents.forEach(event => {
         if (event.player === player.name){
           let subIndex = 0;
+          //get the substitute event
           if (inFirst){
             subIndex = props.subEvents.indexOf(event) - 1;
           }else{
@@ -26,14 +28,18 @@ const Lineup = (props) => {
         }
       })
 
-      return(<Player player={player} sub={sub} key={player.shirt_number}/>)
+      props.cardEvents.forEach(event => {
+        if (event.player === player.name){
+          cards.push(event);
+        }
+      })
+
+      return(<Player player={player} sub={sub} key={player.shirt_number} cards={cards}/>)
     })
 
     return(
     <div>
-      <div className="lineUpHeader">
-        <h2>Lineup</h2>
-      </div>
+      <p className="categoryHeader">Lineup</p>
       <div className="lineUp">
         {lineUp}
       </div>
