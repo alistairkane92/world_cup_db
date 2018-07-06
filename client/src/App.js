@@ -11,6 +11,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 class App extends Component {
   render() {
     return (
+      <div>
+      {/* <h1>Testing</h1> */}
       <Router>
         <React.Fragment>
           <Route exact path="/" component={Home}/>
@@ -20,6 +22,7 @@ class App extends Component {
           <Route exact path="/countries/:name" component={Country}/>
         </React.Fragment>
       </Router>
+      </div>
     )
   }
 }

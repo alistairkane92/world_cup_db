@@ -33,7 +33,7 @@ const Player = ({player, sub, cards}) => {
   if (cards.length > 0){
     cards.forEach(card => {
       const cardP = (
-        <div className="card">
+        <div key={card} className="card">
           <div className={card.type_of_event}> </div>
           <p>({card.time})</p>
         </div>
