@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <Router>
         <React.Fragment>
-          <NavBar />
+          <NavBar/>
           <Route exact path="/" component={Home}/>
           <Route exact path="/matches" component={Matches}/>
           <Route exact path="/matches/:id" component={MatchView}/>
