@@ -1,0 +1,8 @@
+#country-div{
+  background-color: maroon;
+  display: flex
+}
+
+#table{
+  width: 50vw;
+}

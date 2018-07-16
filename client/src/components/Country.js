@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
-import MatchTable from './MatchTable';
+import React, { Component } from 'react'
+import MatchTable from './MatchTable'
+import CountryStats from './CountryStats'
+import './styles/Country.css'
 
 class Country extends Component {
   constructor(props){
@@ -14,19 +16,22 @@ class Country extends Component {
     const url = `/matches/country?fifa_code=${countryCode}`
 
     fetch(url)
-      .then(res => res.json())
-      .then(data => this.setState({
-        matches: data
-      }))
+    .then(res => res.json())
+    .then(data => this.setState({
+      matches: data
+    }))
   }
 
   render(){
     if (this.state.matches === null) return null;
 
     return(
-      <MatchTable matches={this.state.matches}/>
+      <div id="country-div">
+        <MatchTable matches={this.state.matches}/>
+        <CountryStats/>
+      </div>
     )
   }
 }
 
-export default Country;
+export default Country
