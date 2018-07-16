@@ -1,62 +1,55 @@
-import React, { Component} from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react'
 import './styles/Nav.css';
 
-class NavBar extends Component{
-  constructor(props){
-    super(props);
-  }
-
-  render(){
-    return(
-      <nav>
-        <ul id="nav">
-          <li><Link to="/">Home</Link></li>
-          <li id="country-menu-li">Country
-            <div id="country-submenu-container">
-              <ul>
-                <li><Link to="/countries/arg">Argentina</Link></li>
-                <li><Link to="/countries/aus">Australia</Link></li>
-                <li><Link to="/countries/bel">Belgium</Link></li>
-                <li><Link to="/countries/bra">Brazil</Link></li>
-                <li><Link to="/countries/col">Columbia</Link></li>
-                <li><Link to="/countries/crc">Costa Rica</Link></li>
-                <li><Link to="/countries/cro">Croatia</Link></li>
-                <li><Link to="/countries/den">Denmark</Link></li>
-                <li><Link to="/countries/egy">Egypt</Link></li>
-                <li><Link to="/countries/eng">England</Link></li>
-                <li><Link to="/countries/fra">France</Link></li>
-                <li><Link to="/countries/ger">Germany</Link></li>
-                <li><Link to="/countries/isl">Iceland</Link></li>
-                <li><Link to="/countries/irn">Iran</Link></li>
-                <li><Link to="/countries/jpn">Japan</Link></li>
-                <li><Link to="/countries/kor">Korea Republic</Link></li>
-              </ul>
-              <ul>
-                <li><Link to="/countries/mex">Mexico</Link></li>
-                <li><Link to="/countries/mar">Morocco</Link></li>
-                <li><Link to="/countries/nga">Nigeria</Link></li>
-                <li><Link to="/countries/pan">Panama</Link></li>
-                <li><Link to="/countries/per">Peru</Link></li>
-                <li><Link to="/countries/pol">Poland</Link></li>
-                <li><Link to="/countries/por">Portugal</Link></li>
-                <li><Link to="/countries/rus">Russia</Link></li>
-                <li><Link to="/countries/ksa">Saudi Arabia</Link></li>
-                <li><Link to="/countries/sen">Senegal</Link></li>
-                <li><Link to="/countries/srb">Serbia</Link></li>
-                <li><Link to="/countries/esp">Spain</Link></li>
-                <li><Link to="/countries/swe">Sweden</Link></li>
-                <li><Link to="/countries/sui">Switzerland</Link></li>
-                <li><Link to="/countries/tun">Tunisia</Link></li>
-                <li><Link to="/countries/uru">Uruguay</Link></li>
-              </ul>
-            </div>
-          </li>
-          <li><Link to="/matches">Matches</Link></li>
-        </ul>
-      </nav>
-    )
-  }
+const NavBar = () => {
+  return(
+    <nav>
+      <ul id="nav">
+        <li><a href="/">Home</a></li>
+        <li id="country-menu-li">Country
+          <div id="country-submenu-container">
+            <ul>
+              <li><a href="/countries/arg">Argentina</a></li>
+              <li><a href="/countries/aus">Australia</a></li>
+              <li><a href="/countries/bel">Belgium</a></li>
+              <li><a href="/countries/bra">Brazil</a></li>
+              <li><a href="/countries/col">Columbia</a></li>
+              <li><a href="/countries/crc">Costa Rica</a></li>
+              <li><a href="/countries/cro">Croatia</a></li>
+              <li><a href="/countries/den">Denmark</a></li>
+              <li><a href="/countries/egy">Egypt</a></li>
+              <li><a href="/countries/eng">England</a></li>
+              <li><a href="/countries/fra">France</a></li>
+              <li><a href="/countries/ger">Germany</a></li>
+              <li><a href="/countries/isl">Iceland</a></li>
+              <li><a href="/countries/irn">Iran</a></li>
+              <li><a href="/countries/jpn">Japan</a></li>
+              <li><a href="/countries/kor">Korea Republic</a></li>
+            </ul>
+            <ul>
+              <li><a href="/countries/mex">Mexico</a></li>
+              <li><a href="/countries/mar">Morocco</a></li>
+              <li><a href="/countries/nga">Nigeria</a></li>
+              <li><a href="/countries/pan">Panama</a></li>
+              <li><a href="/countries/per">Peru</a></li>
+              <li><a href="/countries/pol">Poland</a></li>
+              <li><a href="/countries/por">Portugal</a></li>
+              <li><a href="/countries/rus">Russia</a></li>
+              <li><a href="/countries/ksa">Saudi Arabia</a></li>
+              <li><a href="/countries/sen">Senegal</a></li>
+              <li><a href="/countries/srb">Serbia</a></li>
+              <li><a href="/countries/esp">Spain</a></li>
+              <li><a href="/countries/swe">Sweden</a></li>
+              <li><a href="/countries/sui">Switzerland</a></li>
+              <li><a href="/countries/tun">Tunisia</a></li>
+              <li><a href="/countries/uru">Uruguay</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="/matches">Matches</a></li>
+      </ul>
+    </nav>
+  )
 }
 
 export default NavBar;
