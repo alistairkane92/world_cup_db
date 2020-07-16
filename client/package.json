@@ -4,7 +4,7 @@
   "private": true,
   "proxy": "http://worldcup.sfg.io/",
   "dependencies": {
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.19",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-router-dom": "^4.3.1",
